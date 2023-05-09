@@ -90,6 +90,7 @@ form button:hover {
     background: green;
 }
 
-/* .todo-container {
-    width: 40vw;
-} */
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}

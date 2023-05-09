@@ -9,10 +9,12 @@ const todoList = document.querySelector(".todo-list")
 // event listener
 todoButton.addEventListener("click", addTodo)
 
+todoList.addEventListener('click', deleteCheck)
+
 // function
 function addTodo(event) {
     event.preventDefault()
-    console.log('helloooo')
+    console.log('clog : add elements')
 
     const todoDiv = document.createElement('div')
     todoDiv.classList.add('todo');
@@ -36,4 +38,17 @@ function addTodo(event) {
     todoList.appendChild(todoDiv)
 
     todoInput.value = ""
+}
+
+function deleteCheck(e) {
+    console.log('clog : delete elements')
+
+    const item = e.target
+
+    if (e.target.classList[0] === "trash-btn") {
+        // e.target.remove()
+        const todo = item.parentElement
+        todo.remove()
+    }
+
 }
