@@ -94,3 +94,12 @@ form button:hover {
 .fa-check {
     pointer-events: none;
 }
+
+.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.testing {
+    color: green;
+}
