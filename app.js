@@ -41,15 +41,20 @@ function addTodo(event) {
 }
 
 function deleteCheck(e) {
-    console.log('clog : delete elements')
 
     const item = e.target
 
     // delete 
-    if (e.target.classList[0] === "trash-btn") {
-        // e.target.remove()
-        const todo = item.parentElement
-        todo.remove()
+    if (e.target.classList[0] === 'trash-btn') {
+
+        todo = e.target.parentElement
+
+        todo.classList.toggle('fall')
+        todo.addEventListener('transitionend', function () {
+            e.target.parentElement.remove()
+        })
+        console.log('clog : delete elements')
+
     }
 
     // check
@@ -58,6 +63,7 @@ function deleteCheck(e) {
         const todo = item.parentElement
         todo.classList.toggle('completed')
         todo.classList.toggle('testing')
+        console.log('clog : check elements')
     }
 
 }
