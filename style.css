@@ -35,10 +35,61 @@ form button {
     color: #d88771;
     background-color: white;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 form button:hover {
     color: white;
     background-color: #d88771;
 }
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    width: 50%;
+    list-style: none;
+}
+
+.todo {
+    margin: .5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.todo li {
+    /* from space between, to flex 1
+    the li is gonna take the rest of the space remaining resulting the 2 buttons pushed to the other side  */
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    background: #ff6f47;
+    color: white;
+    padding: 1rem;
+    border: none;
+    transition: all .25s ease-in-out;
+}
+
+.trash-btn:hover {
+    color: white;
+    background: red;
+}
+
+.complete-btn:hover {
+    color: white;
+    background: green;
+}
+
+/* .todo-container {
+    width: 40vw;
+} */
